@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- Link to the CSS stylesheet in the public/styles directory -->
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <!-- Add more navigation links as needed -->
+        </ul>
+    </nav>
+
+    <!-- Main content area -->
+    <div class="container">
+        <h1>Welcome to Our VLOG website!</h1>
+        <!-- Add video player to display featured video -->
+        <video controls>
+            <source src="https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Section for displaying recent vlogs -->
+        <h2>Recent Vlogs</h2>
+        <div class="vlog-gallery">
+            <!-- Loop through vlogs and display thumbnails -->
+            <!-- For example, you can use the same sample image for thumbnails -->
+            <% for (let vlog of recentVlogs) { %>
+                <div class="vlog-thumbnail">
+                    <img src="https://via.placeholder.com/500x300" alt="Sample Thumbnail">
+                    <h3><%= vlog.title %></h3>
+                    <p><%= vlog.date %></p>
+                </div>
+            <% } %>
+        </div>
+
+        <!-- Section for displaying image gallery -->
+        <h2>Image Gallery</h2>
+        <div class="image-gallery">
+            <!-- Loop through images and display thumbnails -->
+            <!-- For example, you can use the same sample image for the gallery -->
+            <% for (let image of imageGallery) { %>
+                <div class="image-thumbnail">
+                    <img src="https://via.placeholder.com/400x200" alt="Sample Image">
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Vlog Website</p>
+    </footer>
+
+    <!-- Add your JavaScript scripts or link to external scripts here -->
+    <script src="/scripts/main.js"></script>
+</body>
+</html>
